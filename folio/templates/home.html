@@ -35,13 +35,11 @@
         <i class="fa fa-times" id="menu-close"></i>
         <div class="container">
           <div class="image">
-            {% if information.my_photo %}
-            <img src="{{ information.my_photo.url}}" alt="joseck">
-            {% endif %}
+            <a href="#"><img src={% static 'assets/images/author-image.jpg' %} alt="" /></a>
           </div>
           <div class="author-content">
-            <h4>{{ information.name}}</h4>
-            <span>FullStack Developer</span>
+            <h4>Reflux Me</h4>
+            <span>Web Designer</span>
           </div>
           <nav class="main-nav" role="navigation">
             <ul class="main-menu">
@@ -71,7 +69,7 @@
     <section class="section about-me" data-section="section1">
       <div class="container">
         <div class="section-heading"><br><br>
-          <h2>{{ information.name }}</h2>
+          <h2>Joseck Ogachi</h2>
           <h3>FullStack Developer</h3>
           <div class="line-dec"></div><br><br>
           <span style="font-weight:bold;">I am a web junior developer.Recently graduated from Moringa School.Quite the tech enthusiast.
@@ -124,26 +122,56 @@
           <div class="line-dec"></div>
           <span style="font-weight:bold;">Hover over images to view project description.</span>
         </div>
-        {% for project in projects %}
         <div class="row">
           <div class="isotope-wrapper">
             <div class="isotope-box">
-              <div class="isotope-item" data-type="nature">
+
+              <div class="isotope-item" data-type="people">
                 <figure class="snip1321">
-                  <img src="{{ project.project_picture.url}}" alt="sq-sample26" />
+                  <img src={% static 'assets/images/portfolio-02.jpg' %} alt="sq-sample26" />
                   <figcaption>
-                    <h4>{{ project.project_title }}</h4>
-                    <span>{{ project.project_description }}</span>
-                    <p>
-                      <a href="{{ project.project_link }}">{{ project.project_link }}</a>
-                    </p>
+                    <h4>Blog App</h4>
+                    <span>An interactive blog application.</span>
+                    <a href="https://josecksblog.herokuapp.com/">https://josecksblog.herokuapp.com/</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="isotope-item" data-type="animals">
+                <figure class="snip1321">
+                  <img src={% static 'assets/images/portfolio-03.jpg' %} alt="sq-sample26" />
+                  <figcaption>
+                    <h4>Github Search</h4>
+                    <span>An application that consumes the github api to search github users.</span>
+                    <a href="https://joseck12.github.io/search/">https://joseck12.github.io/search/</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="isotope-item" data-type="people">
+                <figure class="snip1321">
+                  <img src={% static 'assets/images/portfolio-04.jpg' %} alt="sq-sample26" />
+                  <figcaption>
+                    <h4>Picturegram</h4>
+                    <span>A clone of the instagram app.</span>
+                    <a href="https://joseckgram.herokuapp.com/">https://joseckgram.herokuapp.com/</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="isotope-item" data-type="animals">
+                <figure class="snip1321">
+                  <img src={% static 'assets/images/portfolio-06.jpg' %} alt="sq-sample26" />
+                  <figcaption>
+                    <h4>Quotes</h4>
+                    <span>An application where users can create quotes and others can vote whether inspirational or not.</span>
+                    <a href="https://joseck12.github.io/quotes/">https://joseck12.github.io/quotes/</a>
                   </figcaption>
                 </figure>
               </div>
             </div>
           </div>
         </div>
-        {% endfor %}
       </div>
     </section>
 

@@ -1,17 +1,10 @@
 from django.shortcuts import render,redirect
-from .models import Project,Skill,Personal_Information,Contact
+from .models import Contact
 from django.contrib import messages
 
 # Create your views here.
 def home(request):
-    title = "JOSECK OGACHI"
-    information = Personal_Information.objects.first()
-    skills = Skill.objects.all()
-    projects = Project.objects.all()
-    # for info in information:
-    #     information = info
-    return render(request, 'home.html', {'title': title, 'projects': projects,
-                                          'information': information, 'skills': skills})
+    return render(request, 'home.html')
 
 def contact(request):
     if request.method == 'POST':
